@@ -1,20 +1,3 @@
-# Instructions
+This repo  is launched here: https://aashishp.quarto.pub/easy-nex-gddp-cmip6/.
 
-Install Quarto
-- https://quarto.org/docs/get-started/
-
-
-```bash
-
-c:\Python310\python.exe -m venv .venv
-.venv\Scripts\activate
-python -c "import sys;print(sys.executable)"
-
-SET PATH=%PATH%;C:\Program Files\Quarto\bin
-SET QUARTO_PYTHON=c:\python310\python.exe
-
-quarto check jupyter
-quarto preview
-
-
-```
+Changes made to this repo will not affect the published site. Please reach out to repo admin at aashishpanta0@gmail.com.
