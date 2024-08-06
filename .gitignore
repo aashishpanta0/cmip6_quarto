@@ -1,0 +1,7 @@
+_book/
+.quarto/
+.venv/
+notebooks/.output/
+notebooks/.visus_cache/
+
+/.quarto/

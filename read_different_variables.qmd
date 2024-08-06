@@ -1,0 +1,18 @@
+# Local cache control and reading different variables
+
+In this section we show how to control the local cache
+
+
+
+
+{{< pagebreak >}}
+### Notebook Code {#sec-hellocmip6code}
+{{< embed notebooks/cmip6_IDX_03_read_data_variables.ipynb echo=true >}}
+
+
+
+{{< pagebreak >}}
+## Controlling local cache
+
+
+

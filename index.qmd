@@ -1,0 +1,61 @@
+# Preface {.unnumbered}
+
+This book documents a set of simple python tools to easily **access** and, most importantly, **use** the NEX-GDDP-CMIP6 data in a simple way that does not require bulk dowloads of many large netcdf files. 
+
+In short a user can directly "open" a remote dataset in a Jupyter notebook and immediately process it or visualizate it with
+standard python libraries like `Numpy` and `matplotlib` as shown in Figure @fig-easy-cmip6.
+
+
+```{python}
+#| label: fig-easy-cmip6
+#| fig-cap: "Simple plot"
+
+from PIL import Image
+
+img = Image.open("images/nasa-day202.png")
+
+box = (185, 150, 1630, 770)
+img2 = img.crop(box)
+img2.save('images/nasa-day202.cropped.png')
+
+```
+
+
+![Immediate viasualization of a timestep of the NEX-GDDP-CMIP6 data wihout any bulk data download.](images/nasa-day202.cropped.png){#fig-easy-cmip6 width=80%}
+
+In particular, loading the dataset diaplayed in @fig-easy-cmip6 requires only the following two lines of Python code:
+
+```{python}
+#| echo: false
+
+import sys
+
+try:
+  import OpenVisus as ov
+except:
+  sys.path.append(r"C:\projects\OpenVisus\build\RelWithDebInfo")
+  import OpenVisus as ov
+
+# Set climate variables
+model     = "ACCESS-CM2"
+variable  = "huss" 
+year      = 2020 # 2015 is the year whne the data switches from historical to simulated
+scenario  = "ssp585"
+dataset_name = f"huss_day_ACCESS-CM2_ssp585_r1i1p1f1_gn"
+
+# Set timestep to day corresponds to July 21. See https://nsidc.org/data/user-resources/help-center/day-year-doy-calendar
+day_of_the_year = 202 
+timestep =year*365 + day_of_the_year
+```
+
+```{python}
+#| echo: true
+
+# Open remote dataset to variable db
+db = ov.LoadDataset(f"http://atlantis.sci.utah.edu/mod_visus?dataset={dataset_name}")
+# Load anta in a numpy array data
+data=db.read(time=timestep) 
+```
+
+The full Jupyter notebook for this example is provided in @sec-hellocmip6code.
+

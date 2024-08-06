@@ -1,0 +1,15 @@
+# Compute temperatrue trend
+
+In this section we show how to computer a simple temperature trend
+
+
+
+
+{{< pagebreak >}}
+### Notebook Code {#sec-hellocmip6code}
+{{< embed notebooks/cmip6_IDX_08_computed_temperature_trend.ipynb echo=true >}}
+
+
+
+
+
