@@ -2,31 +2,33 @@ project:
   type: book
 
 book:
-  title: "Easy NEX-GDDP-CMIP6"
-  author: "Valerio Pascucci,  Luis Sanchez, Giorgio Scorzelli, Aashish Panta, and Arleth Salinas"
-  date: "7/20/2024"
-  cover-image: images/nasa-cover.png
+  title: "It is easy to use the NEX-GDDP-CMIP6 data!"
+  author: "Aashish Panta, Valerio Pascucci,  Luis Sanchez, Giorgio Scorzelli"
+  date: "09/31/2024"
+  cover-image: NASA_data.png
   chapters:
     - index.qmd
-    - intro.qmd
-    - examples.qmd
-    - read_different_variables.qmd
-    - computer_temperature_trend.qmd
-    - references.qmd
+    - 001_intro.qmd
+    - 002_examples.qmd
+    - allvars.md
+    - 003_read_different_varibles.qmd
+    - 004_compute_temperature_trend.qmd
+    - 999_references.qmd
 
 bibliography: references.bib
 
 format:
   html:
-    cover-image: images/nasa-cover.png
+    cover-image: NASA_data.png
     theme: cosmo
     toc: true
     toc-depth: 5
   pdf:
     documentclass: scrreprt
-    cover-image: images/nasa-cover.png
+    cover-image: NASA_data.png
 
 
 execute:
   echo: false
+  python: /home/sci/aashishp/miniconda3/envs/cmip6/bin/python
 jupyter: python3

@@ -1,4 +1,6 @@
 - source: project
   quarto-pub:
-    - id: 21befc19-4b52-4c1a-93c6-95017a4bb3b5
-      url: 'https://aashishp.quarto.pub/easy-nex-gddp-cmip6'
+    - id: 46a6c6f9-f386-4c5d-ac25-1522da5ea189
+      url: 'https://aashishp.quarto.pub/it-is-easy-to-use-the-nex-gddp-cmip6-data'
+    - id: f29ba8e0-c9c4-4540-9e72-b8f3f92f06e5
+      url: 'https://aashishp.quarto.pub/nex-gddp-cmip6'

@@ -1,0 +1,24 @@
+# Loading the data
+
+We show the practical use of the tools though a set of simple examples.
+
+## Hello NEX-GDDP-CMIP6
+
+We provide a simple jupyter notebook for loading wiht th OpenVisus library one timestep of one variable and
+display it though the matplotlib library and also sabing it to a file. In a few lines of Python
+code a user can plot an image of the NEX-GDDP-CMIP6 as in Figure @fig-cmip6.
+
+
+{{< embed Notebooks/cmip6_IDX_01_read_data.ipynb#fig-cmip6 >}}
+
+
+
+
+{{< pagebreak >}}
+### Notebook Code {#sec-hellocmip6code}
+{{< embed Notebooks/cmip6_IDX_01_read_data.ipynb echo=true >}}
+
+
+
+
+
